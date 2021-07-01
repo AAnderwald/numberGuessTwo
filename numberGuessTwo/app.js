@@ -1,6 +1,8 @@
 let rand = Math.floor(Math.random() * 100) + 1;
 var turns = 5;
-/* timer runs 40 down but how to stop it when number is guess correcty.  
+// timer runs 40 down but how to stop it when number is guess correcty. also strart it when guess starts
+ 
+
 var myVar = setInterval(function(){ myTimer() }, 1000);
 var secondlimit = 40;
 
@@ -23,7 +25,7 @@ function zeroPad(num, places) {
   var zero = places - num.toString().length + 1;
   return Array(+(zero > 0 && zero)).join("0") + num;
 }
-*/
+
 document.getElementById("submitGuess").onclick = function checkNumber(){
    
 
