@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guess Number Game 2</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@300&display=swap" rel="stylesheet">
+
+</head>
+
+
+ <body>
+     
+    <h1 class="header">This is a number guessing game<br>
+        pick a number  1 - 100 </h1>
+
+    <div id="clock">
+        <p>Time is Ticking</p>
+        <p id="timerDisplay">00:00:40</p>
+    </div>
+    
+    <div class="form">
+        <label class="enterGuess" for="guessBox">Place your guess here: </label> 
+        <input type="text" name="guessBox" id="guessBox" class="guessBox"> 
+        <input type="submit" onclick="startNewGame()" value="Submit Your Guess" class="guessSubmit" id="submitGuess">  
+
+    </div>
+
+
+    <script src="app.js"></script>
+</body>
+</html>
+
+
