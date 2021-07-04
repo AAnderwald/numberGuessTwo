@@ -43,7 +43,7 @@ function startNewGame() {
 
 
 // timer 
-const start = 60;
+const start = 5;
 const tick = 1000; 
 let count = start;
 let timer_func = null;

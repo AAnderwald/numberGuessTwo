@@ -9,30 +9,28 @@ guesses.innerHTML = "";
 //this will make the text print out instead of using alerts. 
 var para = document.getElementById('output');
 
-
 //guessing part
 document.getElementById("submitGuess").onclick = function checkNumber(){
-    
     
     var guess = document.getElementById("guessBox").value;
     guesses.innerHTML += guess + ",  "                                      //this will print the guess you already made
 
     if (guess == rand){
-        para.innerText = ("Inconceivable!");  //movie Princess Bride
+        para.innerText = ("Contratualations!");
         return;
     } else {
         turns--;
         if (guess < rand) {
             
-            para.innerText = ("Too low, You guessed wrong." + turns);   // movie Princess Bride
+            para.innerText = ("Too low, try again, you have remaining " + turns);
         } else if (guess > rand) {
-            para.innerText =  ("Too high, You guessed wrong " + turns); //movie Princess Bride
+            para.innerText =  ("Too high, one more time, you have remaining " + turns);
         }
     }
     if (turns==0){
-        para.innerText =  ("You mean you wish to surrender to me? Very well, I accept.");  ///movie Princess Bride       //movie Princess Bride
+        para.innerText =  ("Oop! Try again.");
     }
-
+    
 }
 
 function startNewGame() {
@@ -43,14 +41,14 @@ function startNewGame() {
 
 
 // timer 
-const start = 60;
+const start = 10;
 const tick = 1000; 
 let count = start;
 let timer_func = null;
-var paras = document.getElementById('output2');
 
 function startTimer() {
-    count = start;
+
+       count = start;
     document.getElementById("clock").innerHTML = count;
     document.getElementById("startButton").disabled = true;
     timer_func = setInterval(countdown, tick);  
@@ -61,7 +59,6 @@ function countdown() {
     document.getElementById("clock").innerHTML = count;
     if (count==0) {
         stopTimer();
-        paras.innerText =  ("Times up! " + " Never go in against a Sicilian when death is on the line!"); 
     }
 }
 
